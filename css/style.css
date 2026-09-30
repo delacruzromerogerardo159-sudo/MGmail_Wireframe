@@ -11,7 +11,7 @@
   --text: #17232b;
   --muted: #6d7880;
   --border: #dbe1e5;
-  --primary: #376b3f;
+  --primary: #3c8548;
   --primary-dark: #0d504a;
   --accent: #3f9fda;
   --danger: #b84b4b;
@@ -484,8 +484,8 @@ a {
 }
 
 .drawer-link.selected {
-  background: #e8f3f1;
-  color: var(--primary-dark);
+  background: #dfe2f1;
+  color: #291677;
 }
 
 .drawer-link.selected span {
