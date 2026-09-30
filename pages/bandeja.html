@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MGmail - Bandeja de entrada</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="topbar">
+      <button class="icon-button profile-button" id="openMenu" aria-label="Abrir menú">G</button>
+
+      <div class="top-title">
+        <span class="small-brand">MGmail</span>
+        <h1>Bandeja de entrada</h1>
+      </div>
+
+      <div class="top-actions">
+        <button class="icon-button" aria-label="Notificaciones">♧</button>
+        <button class="icon-button" aria-label="Buscar">⌕</button>
+      </div>
+    </header>
+
+    <section class="filter-row">
+      <button class="filter-chip active">Prioritarios</button>
+      <button class="filter-chip">Otros</button>
+      <button class="filter-chip filter-right" id="filterButton">Filtrar</button>
+    </section>
+
+    <main class="mail-list">
+
+      <section class="mail-section">
+        <div class="section-title">Hoy</div>
+
+        <article class="mail-card unread">
+          <div class="sender-avatar pink">ED</div>
+          <div class="mail-content">
+            <div class="mail-line">
+              <strong>Equipo de cuentas Microsoft</strong>
+              <time>4:33 a. m.</time>
+            </div>
+            <div class="mail-subject">Se agregó la información de seguridad de la cuenta</div>
+            <p>Cuenta Microsoft · Se agregó la información de seguridad...</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="mail-section">
+        <div class="section-title">Agosto</div>
+
+        <article class="mail-card">
+          <div class="sender-avatar green">M</div>
+          <div class="mail-content">
+            <div class="mail-line">
+              <strong>Microsoft</strong>
+              <time>15 ago</time>
+            </div>
+            <div class="mail-subject">Actualizaciones de nuestros términos de uso</div>
+            <p>Hola: Ha recibido este correo electrónico porque...</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="mail-section">
+        <div class="section-title">Enero</div>
+
+        <article class="mail-card">
+          <div class="sender-avatar pink">O</div>
+          <div class="mail-content">
+            <div class="mail-line">
+              <strong>OneDrive</strong>
+              <time>18 ene</time>
+            </div>
+            <div class="mail-subject">Tus recuerdos de este día</div>
+            <p>Este día enero 18 · Mira tus recuerdos de este día...</p>
+          </div>
+        </article>
+
+        <article class="mail-card">
+          <div class="sender-avatar pink">O</div>
+          <div class="mail-content">
+            <div class="mail-line">
+              <strong>OneDrive</strong>
+              <time>17 ene</time>
+            </div>
+            <div class="mail-subject">Tus recuerdos de este día</div>
+            <p>Este día enero 17 · Mira tus recuerdos de este día...</p>
+          </div>
+        </article>
+
+        <article class="mail-card">
+          <div class="sender-avatar pink">O</div>
+          <div class="mail-content">
+            <div class="mail-line">
+              <strong>OneDrive</strong>
+              <time>16 ene</time>
+            </div>
+            <div class="mail-subject">Tus recuerdos de este día</div>
+            <p>Este día enero 16 · Mira tus recuerdos de este día...</p>
+          </div>
+        </article>
+
+        <article class="mail-card">
+          <div class="sender-avatar pink">O</div>
+          <div class="mail-content">
+            <div class="mail-line">
+              <strong>OneDrive</strong>
+              <time>14 ene</time>
+            </div>
+            <div class="mail-subject">Tus recuerdos de este día</div>
+            <p>Este día enero 14 · Mira tus recuerdos de este día...</p>
+          </div>
+        </article>
+
+        <article class="mail-card">
+          <div class="sender-avatar pink">O</div>
+          <div class="mail-content">
+            <div class="mail-line">
+              <strong>OneDrive</strong>
+              <time>8 ene</time>
+            </div>
+            <div class="mail-subject">Tus recuerdos de este día</div>
+            <p>Este día enero 8 · Mira tus recuerdos de este día...</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <button class="compose-button" id="composeButton">
+      <span>＋</span>
+      <span>Correo nuevo</span>
+    </button>
+
+    <nav class="bottom-nav">
+      <a class="nav-item active" href="bandeja.html"><span>✉</span><small>Correo</small></a>
+      <a class="nav-item" href="menu.html"><span>▣</span><small>Calendario</small></a>
+      <a class="nav-item" href="menu.html"><span>▤</span><small>Fuente</small></a>
+      <a class="nav-item" href="menu.html"><span>▦</span><small>Aplicaciones</small></a>
+    </nav>
+
+    <div class="toast" id="toast">
+      <strong>Aviso visual</strong>
+      <span>Esta es una demostración del wireframe.</span>
+    </div>
+
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <aside class="drawer" id="drawer">
+      <div class="drawer-header">
+        <div class="brand-logo small">MG</div>
+        <div>
+          <strong>MGmail</strong>
+          <span>Gerardo.romero123@outlook.es</span>
+        </div>
+        <button class="close-button" id="closeMenu">×</button>
+      </div>
+
+      <div class="account-list">
+        <button class="account active-account"><span class="account-avatar blue">G</span><span>Gerardo</span></button>
+        <button class="account"><span class="account-avatar purple">R</span><span>Cuenta personal</span></button>
+        <button class="account"><span class="account-avatar white">M</span><span>Microsoft</span></button>
+      </div>
+
+      <a class="drawer-link selected" href="bandeja.html"><span>▣</span> Bandeja de entrada <b>18</b></a>
+      <a class="drawer-link" href="menu.html"><span>✎</span> Borradores</a>
+      <a class="drawer-link" href="menu.html"><span>▤</span> Archivo</a>
+      <a class="drawer-link" href="menu.html"><span>➤</span> Enviado</a>
+      <a class="drawer-link" href="menu.html"><span>♜</span> Eliminado</a>
+      <a class="drawer-link" href="menu.html"><span>□</span> Correo no deseado</a>
+      <a class="drawer-link" href="menu.html"><span>▢</span> Conversation History</a>
+
+      <div class="storage-card">
+        <div class="cloud">☁</div>
+        <div>
+          <strong>Almacenamiento de Microsoft</strong>
+          <div class="storage-bar"><i></i></div>
+          <small>4.8 GB usado de 5 GB (96%)</small>
+          <button>Administrar almacenamiento</button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="modal" id="composeModal">
+      <div class="modal-card">
+        <button class="close-button" id="closeModal">×</button>
+        <h2>Correo nuevo</h2>
+        <input placeholder="Para">
+        <input placeholder="Asunto">
+        <textarea placeholder="Escribe tu mensaje..."></textarea>
+        <button class="primary-button" id="fakeSend">Enviar</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>
